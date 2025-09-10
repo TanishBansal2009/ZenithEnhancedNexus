@@ -1,0 +1,14 @@
+SpeechRecognition
+pyttsx3
+google-generativeai
+requests
+tqdm
+pyjokes
+python-dotenv
+sympy
+cryptography
+sounddevice
+vosk
+termcolor
+pyaudio
+psutil

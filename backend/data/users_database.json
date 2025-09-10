@@ -1,0 +1,17 @@
+{
+    "profiles": {
+        "Tanish": {
+            "priority": "high",
+            "developer_access": true
+        },
+        "Rinku": {
+            "priority": "high",
+            "developer_access": true
+        },
+        "Rinkesh": {
+            "priority": "high",
+            "developer_access": true
+        }
+    },
+    "active_user": "Tanish"
+}

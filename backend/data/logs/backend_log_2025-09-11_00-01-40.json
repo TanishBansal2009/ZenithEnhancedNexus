@@ -1,0 +1,62 @@
+{
+    "system_info": {
+        "startup_time": "2025-09-11T00:01:40.494306",
+        "python_version": "3.13.5",
+        "platform": "Windows",
+        "release": "11",
+        "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "ram_total": "7.73 GB"
+    },
+    "zen_state": {
+        "active_user": "Tanish",
+        "priority": "high",
+        "developer_mode": false,
+        "voice_enabled": true,
+        "conversation_history_length": 0
+    },
+    "integrations": {
+        "interfaces": [
+            "speech",
+            "gemini",
+            "reminders",
+            "weather",
+            "news"
+        ],
+        "apis_configured": {
+            "openweather": true,
+            "newsapi": false,
+            "gemini": true
+        },
+        "hardware": {
+            "microphone": true,
+            "screen": true
+        }
+    },
+    "intents": {
+        "supported_intents": [
+            "weather",
+            "reminder",
+            "joke",
+            "news",
+            "calculation",
+            "significance",
+            "standby",
+            "help",
+            "study",
+            "developer",
+            "intro",
+            "condition",
+            "thanks",
+            "chit-chat"
+        ],
+        "local_intents": [
+            "intro",
+            "condition",
+            "thanks"
+        ],
+        "gemini_intents": [
+            "chit-chat",
+            "complex queries"
+        ]
+    }
+}

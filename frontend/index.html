@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEN</title>
+  <style>
+    body {
+      background-color: white;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: black;
+      display: flex;
+      height: 100vh;
+      flex-direction: row;
+    }
+
+    .left-panel {
+      flex: 0 0 30%;
+      background-color: #222;
+      color: limegreen;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 2px solid white;
+      font-family: monospace;
+    }
+
+    .right-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .eyes-panel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      border-bottom: 2px solid black;
+    }
+
+    .time-date-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .eyes-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .eye {
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      border-radius: 50%;
+      margin: 0 75px;
+      animation: blink 1.5s infinite;
+    }
+
+    .eyes-container::after {
+      content: '';
+      position: absolute;
+      width: 225px;
+      height: 6px;
+      background-color: black;
+      z-index: -1;
+    }
+
+    @keyframes blink {
+      0%, 10%, 100% { transform: scaleY(1); }
+      5% { transform: scaleY(0.1); }
+    }
+
+    .time-date p {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .left-panel {
+        flex: none;
+        height: 30vh;
+        border-right: none;
+        border-bottom: 2px solid white;
+      }
+      .right-panel {
+        flex: none;
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="left-panel" id="output-log">
+    <h2>Zenith Enhanced Nexus</h2>
+  </div>
+  
+  <div class="right-panel">
+    <div class="eyes-panel">
+      <div class="eyes-container">
+        <div class="eye"></div>
+        <div class="eye"></div>
+      </div>
+    </div>
+    <div class="time-date-panel">
+      <div class="time-date">
+        <p id="time"></p>
+        <p id="date"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateTimeAndDate() {
+      const now = new Date();
+      document.getElementById('time').textContent = now.toLocaleTimeString();
+      document.getElementById('date').textContent = now.toLocaleDateString(undefined, {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    }
+
+    setInterval(updateTimeAndDate, 1000);
+    updateTimeAndDate();
+  </script>
+</body>
+</html>
