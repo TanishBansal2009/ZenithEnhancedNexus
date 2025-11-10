@@ -2,7 +2,7 @@
 from interfaces.speech import zen_speak, greet
 from interfaces.input import get_user_input, remove_wake_word, get_input
 from interfaces.startup import load_data_in_background, check_and_install_requirements
-from interfaces.gemini import ask_gemini
+from interfaces.ai_declaration import ask_gemini, ask_openai
 
 # ---- Features ----
 from features.apps import webbrowser
@@ -19,7 +19,7 @@ from core.states.developer_mode import handle_developer_queries
 from core.states.standby import standby_mode
 from core.states.help import handle_help_mode
 from core.logger import write_backend_log
-
+from core.security import firebase
 # ---- Resources ----
 from resources.dialogue_library import (
     developer_startup,

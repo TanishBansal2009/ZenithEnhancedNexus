@@ -11,6 +11,7 @@ engine = pyttsx3.init()
 def zen_speak(text, speak_aloud=True):
     zen_speak_term = colored("Zen : ", "cyan")
     print(f"{zen_speak_term}{text}")
+    
     if voice_enabled and speak_aloud:
         with speak_lock:
             engine.say(text)
